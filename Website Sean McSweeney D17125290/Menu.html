@@ -1,0 +1,119 @@
+<!Doctype html>
+<meta charset = "utf-8">
+<title>Menu | The Burger Joint </title>
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<link rel="icon" href="images/logo.png" width="50" height="50" align = left>
+</head>
+<header background="images/Wood.jpg">
+
+<!-- nav bar -->
+<div id="navbar">
+<a href="Menu.html">
+  Menu
+  </a>
+  <a href="Info.html">
+  Info
+  </a>
+  <a href="Contact.html">
+  Contact
+  </a>
+  <a href="Basket.html">
+  Basket
+</a>
+<div id="navbarflt">
+<a href="login.html" style="text-decoration: none" >
+Login
+</a>
+<a href="Register.html" style="text-decoration: none" >
+ Register
+</a>
+</div>
+</div>
+
+<div class="slideshow-container">
+
+<a href="Menu.html">
+  <div class="mySlides fade">
+    <div class="numbertext"><img src = "images/logo.png" width="20%" height="20%" align = left></div>
+    <img src="images/title.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"><img src = "images/logo.png" width="20%" height="20%" align = left></div>
+    <img src="images/Burgers.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"><img src = "images/logo.png" width="20%" height="20%" align = left></div>
+    <img src="images/Burgers2.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+  </a>
+
+
+</div>
+
+</header>
+
+<body background="images/Wood.jpg">
+
+<a href="Menu.html">
+<div id=Bubble>
+<div id=logo>
+<img src = "images/logo.png" width="8%" height="8%" align = left>
+</div>
+</div>
+</a>
+<div id=New>
+<h1> Menu </h1>
+<h2> All Meals Are 8 Euro</h2>
+</div>
+<div id=Menu>
+<img src = "images/Menu.jpg" width="100%" height="100%" align = left>
+</div>
+<div id=Menu>
+<img src = "images/Menu2.jpg" width="100%" height="100%" align = left>
+</div>
+<div id=Menu>
+<img src = "images/drinks.jpg" width="100%" height="100%" align = left>
+</div>
+
+<!-- Javascript -->
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+
+
+<footer>
+<div id=center>
+<div id=Center>
+<a href="mailto:theburgerjoint@Gmail.com" style= text-decoration:none;>
+<img src = "images/Email.png" width="5%" height="5%" align = left >
+</a>
+<p > Click the Link Below To Email Us </p>
+<a href="mailto:theburgerjoint@Gmail.com" style= text-decoration:none;>
+<p > theburgerjoint@Gmail.com </p>
+</a>
+</div>
+</div>
+</footer>
+

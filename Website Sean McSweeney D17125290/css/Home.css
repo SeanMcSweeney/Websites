@@ -1,0 +1,256 @@
+header {
+background-color: white;
+text-align: center;
+font-family: trebuchet ms;
+border-style : solid 
+}
+
+#Buy{
+    background : linear-gradient(#dce0e8, #898a8e);
+    border: 2px solid black;
+    color: white;
+    font-size: 100%;
+    width: 373px;
+    height 100px;
+    margin: auto;
+    cursor: pointer;
+}
+
+
+#Buy:hover{
+background : white;
+color: #dce0e8;
+}
+
+#how:hover {
+}
+
+#lol {
+font-size: 10px;
+color: silver;
+text-align : right;
+padding: 20px 20px 20px;
+}
+
+button {
+    background: linear-gradient(#595959, #8c8c8c, #595959);] 
+    border: 2px solid black;
+    color: white;
+    font-size: 40px;
+    width: 23.7%;
+    height 1%px;
+    margin: auto;
+    cursor: pointer;
+    flex-direction: row ;
+    overflow: hidden;
+}
+
+button:hover {
+background : white;
+color: #595959;
+}
+
+h1 {
+font-family : Brush Script MT ; 
+font-size : 70px;
+color : white;
+}
+
+h2 {
+font-family : Brush Script MT ; 
+font-size : 40px;
+color : white;
+}
+
+p {
+color : white;
+}  
+
+
+button:not(:last-child) {
+    border-right: none; 
+}
+
+p {
+font-family: trebuchet ms;
+font-size : 30px
+}
+
+#New {
+padding : 30px 30px 30px; 
+font-size : 30px ; 
+font-family : blippo;
+height= 20%;
+width= 20%;
+text-align: center;
+border: solid 3px;
+}
+
+#special {
+
+}
+
+#New2 {
+padding : 30px 30px 30px; 
+font-size : 30px ; 
+font-family : blippo;
+height= 20%;
+width= 20%;
+text-align: center;
+border: solid 3px;
+}
+
+#New3 {
+padding : 30px 30px 30px; 
+font-size : 30px ; 
+font-family : blippo;
+height= 20%;
+width= 20%;
+text-align: center;
+border: solid 3px;
+}
+
+#container {
+  width: 10em;
+  margin: 5em auto;
+}
+
+#logo {
+  animation: appear 2s;
+  cursor: pointer;
+}
+
+#logo:hover {
+
+}
+
+#bubble { fill: #e76853; }
+#icon { fill:  #fff; }
+
+@keyframes appear {
+  0% {
+    opacity: .0;
+  } 
+
+  25% {
+    opacity: .25;
+  } 
+  
+  50% {
+      opacity: .5;
+  }
+
+  75% {
+    opacity: .75;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#login {
+text-align : right;
+padding-right : 12px;
+text-decoration:none;
+}
+
+#Menu {
+}
+
+#center {
+text-decoration:none;
+}
+
+
+
+
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 20px 12px;
+  position: absolute;
+  top: 0;
+  
+}
+
+
+
+#form1 {
+padding : 80px;
+padding-left : 50px;
+}
+
+#New4 {
+text-align: center;
+padding : 10px;
+}
+
+#Contact {
+filter: blur(3px);
+border-width:3px;
+border-style:outset;
+border-color:#ffffff;
+}
+
+#Info{
+border-width:3px;
+border-style:outset;
+border-color:#ffffff;
+}
+
+#Center {
+text-align: center;
+}
+
+#Cart{
+	size : 40px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 200%;
+}
+
+#navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+#navbarflt {
+float: right;

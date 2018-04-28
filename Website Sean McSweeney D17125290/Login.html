@@ -1,0 +1,167 @@
+
+<?php
+   ob_start();
+   session_start();
+?>
+
+<?
+   // error_reporting(E_ALL);
+   // ini_set("display_errors", 1);
+?>
+
+<!Doctype html>
+<meta charset = "utf-8">
+<title>Login | The Burger Joint </title>
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<link rel="icon" href="images/logo.png" width="50" height="50" align = left>
+
+<!-- Login PHP -->
+
+<?php
+   include("config.php");
+   session_start();
+
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form
+
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']);
+
+      $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
+      $result = mysqli_query($db,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+
+      $count = mysqli_num_rows($result);
+
+      // If result matched $myusername and $mypassword, table row must be 1 row
+
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+
+         header("location: welcome.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
+?>
+
+</head>
+
+<header background="images/Wood.jpg">
+</a>
+
+<!-- nav bar -->
+<div id="navbar">
+<a href="Menu.html">
+  Menu
+  </a>
+  <a href="Info.html">
+  Info
+  </a>
+  <a href="Contact.html">
+  Contact
+  </a>
+  <a href="Basket.html">
+  Basket
+</a>
+<div id="navbarflt">
+<a href="login.html" style="text-decoration: none" >
+Login
+</a>
+<a href="Register.html" style="text-decoration: none" >
+ Register
+</a>
+</div>
+</div>
+
+<!-- Slideshow Title -->
+
+<div class="slideshow-container">
+
+<a href="Menu.html">
+  <div class="mySlides fade">
+    <div class="numbertext"><img src = "images/logo.png" width="20%" height="20%" align = left></div>
+    <img src="images/title.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"><img src = "images/logo.png" width="20%" height="20%" align = left></div>
+    <img src="images/Burgers.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"><img src = "images/logo.png" width="20%" height="20%" align = left></div>
+    <img src="images/Burgers2.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+  </a>
+
+
+</div>
+
+</header>
+
+
+<body background="images/Wood.jpg">
+
+<a href="Menu.html">
+<div id=Bubble>
+<div id=logo>
+<img src = "images/logo.png" width="8%" height="8%" align = left>
+</div>
+</div>
+</a>
+<div id=New>
+<h1> Login </h1>
+</div>
+<div id=form1>
+<form action = "Login.php" method = "post">
+                  <p> Username </p>
+                  <label></label><input type = "text" name = "username" class = "box"><br><br>
+                  <p> Password </p>
+                  <label></label><input type = "password" name = "password" class = "box"><br><br>
+                  <input type = "submit" value = " Submit "><br>
+               </form>
+</div>
+
+<!-- Javascript -->
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+
+
+<footer>
+<div id=center>
+<div id=New>
+<a href="mailto:theburgerjoint@Gmail.com" style= text-decoration:none;>
+<img src = "images/Email.png" width="5%" height="5%" align = left >
+</a>
+<p > Click the Link Below To Email Us </p>
+<a href="mailto:theburgerjoint@Gmail.com" style= text-decoration:none;>
+<p > theburgerjoint@Gmail.com </p>
+</a>
+</div>
+</div>
+</footer>
+
